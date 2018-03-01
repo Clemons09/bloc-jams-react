@@ -7,23 +7,23 @@ class Library extends Component {
     super(props);
     this.state = { albums: albumData };
   }
+
   render() {
     return (
       <section className='library'>
-      {
-        this.state.albums.map( (album, index) =>
-          <Link to={`/album/${album.slug}`} key={index} className="album">
-            <img src={album.albumCover} alt={album.title} />
-            <div className="album-title">{album.title}</div>
-            <div className="album-artist">{album.artist}</div>
-            <div className="album-song-number">{album.songs.length} songs</div>
-          </Link>
+        {
+          this.state.albums.map( (album, index) =>
+            <Link to={`/album/${album.slug}`} key={index}>
+              <img src={album.albumCover} alt={album.title} />
+              <div>{album.title}</div>
+              <div>{album.artist}</div>
+              <div>{album.songs.length} songs</div>
+            </Link>
         )
-      }
-      </section>
+        }
+        </section>
     );
   }
 }
-
 
 export default Library;

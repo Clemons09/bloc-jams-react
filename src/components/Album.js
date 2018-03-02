@@ -6,8 +6,9 @@ class Album extends Component {
   constructor(props) {
     super(props);
     const album = albumData.find(album => {
+      console.log(album);
       return album.slug === this.props.match.params.slug
-    }.bind(this));
+    });
     this.state = {
       album: album
     };
@@ -33,6 +34,7 @@ class Album extends Component {
           <col id="song-duration-column" />
         </colgroup>
         <tbody>
+        
         </tbody>
        </table>
       </section>

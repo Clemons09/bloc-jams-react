@@ -29,6 +29,7 @@ class Album extends Component {
   pause() {
     this.audioElement.pause();
     this.setState({ isPlaying: false });
+    console.log('hey');
   }
 
   setSong(song) {
@@ -44,6 +45,7 @@ class Album extends Component {
       if (!isSameSong) { this.setSong(song); }
       this.play();
     }
+    console.log('hey');
   }
 
   handlePrevClick() {
@@ -66,7 +68,9 @@ class Album extends Component {
   render() {
 
     return (
+
     <section className="album">
+
       <section id="album-info">
         <img id="album-cover-art" src={this.state.album.albumCover} alt = ""/>
         <div className="album-details">
@@ -85,10 +89,12 @@ class Album extends Component {
         <tbody>
           {this.state.album.songs.map( (song, index) =>
             <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-              <td className="song-icons">
-              <Ionicon icon={this.state.isPlaying ? 'ios-pause' : 'ios-play'}>
-                {index + 1}
-              </Ionicon>
+              <td className="song-actions">
+                <button>
+                  <span className="song-number">{index+1}</span>
+                  <span className="ios-play"></span>
+                  <span className="ios-pause"></span>
+                </button>
               </td>
               <td className="song-title">{song.title}</td>
               <td className="song-duration">{song.duration}</td>

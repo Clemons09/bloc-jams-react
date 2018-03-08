@@ -11,9 +11,15 @@ class PlayerBar extends Component {
          <Ionicon icon="ios-skip-forward" onClick={this.props.handleNextClick}/>
        </section>
        <section id="time-control">
-         <div className="current-time">–:––</div>
-         <input type="range" className="seek-bar" />
-         <div className="total-time">–:––</div>
+         <div className="current-time">{this.props.currentTime}</div>
+         <input type="range" className="seek-bar"
+          value={(this.props.currentTime / this.props.duration) || 0}
+          max="1"
+          min="0"
+          step="0.01"
+          onChange={this.props.handleTimeChange}
+          />
+         <div className="total-time">{this.props.duration}</div>
        </section>
        <section id="volume-control">
          <div className="icon ios-volume-low"></div>

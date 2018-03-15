@@ -1,0 +1,33 @@
+.landing {
+  margin: auto;
+  padding: inherit;
+  background-color: teal;
+}
+
+header h1 {
+  border-style: groove;
+  font-size: 40px;
+  text-decoration: overline;
+  text-align: left;
+  font-style: italic;
+  background-color: tomato;
+}
+
+.hero-title {
+  padding-top: 20px;
+  font-size: 60px;
+  font-family: Helvetica, 'sans-serif';
+  color: black;
+  text-shadow: 1px 1px white;
+}
+
+.selling-points {
+  margin-top: 150px;
+  margin-right: 100px;
+  text-align: left;
+}
+
+.point {
+  margin-top: 15px;
+  margin-bottom: 45px;
+}

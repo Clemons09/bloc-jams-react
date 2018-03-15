@@ -1,0 +1,116 @@
+
+body {
+  background-image: url(/assets/images/blurred_backgrounds/blur_bg_3.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  font-family: 'Helvetica', sans-serif;
+}
+
+nav {
+  background: hsla(0, 0%, 0%, 0.2);
+  padding: 1rem 2rem;
+}
+
+nav img {
+  height: 50px;
+}
+
+
+
+#album-cover-art {
+  float: left;
+  padding-bottom: 10px;
+  position: relative;
+  width: 300px;
+}
+
+#album-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2.artist {
+  font-weight: 100;
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+
+
+
+#song-list {
+  font-weight: 100;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+#song-number-column {
+  width: 40px;
+}
+#song-duration-column {
+  width: 80px;
+}
+
+.song-actions button {
+  font-size: 1rem;
+}
+
+tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+
+
+tr:hover .ion-play,
+tr.playing .ion-pause,
+ .ion-play {
+  display: block;
+}
+
+tr .ion-play,
+tr .ion-pause,
+tr:hover .song-number,
+tr.playing .ion-play,
+tr.playing .song-number,
+tr.paused .ion-pause,
+tr.paused .song-number {
+  display: none;
+}
+
+tr:hover {
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+td {
+  padding: 0.75rem;
+}
+
+tr button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+tr.playing button:focus .song-number,
+tr.playing button:focus .ion-play {
+  display: none;
+}
+tr.playing button:focus .ion-pause {
+  display: block;
+}
